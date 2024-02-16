@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dessertsFragment">
+
+    <fragment
+        android:id="@+id/beverageFragment"
+        android:name="com.example.demonavigation.Fragment.BeverageFragment"
+        android:label="fragment_beverage"
+        tools:layout="@layout/fragment_beverage" >
+        <action
+            android:id="@+id/action_beverageFragment_to_oderResultFragment"
+            app:destination="@id/oderResultFragment" />
+        <action
+            android:id="@+id/action_beverageFragment_to_mainDishesFragment"
+            app:destination="@id/mainDishesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oderResultFragment"
+        android:name="com.example.demonavigation.Fragment.OderResultFragment"
+        android:label="fragment_oder_result"
+        tools:layout="@layout/fragment_oder_result" >
+        <action
+            android:id="@+id/action_oderResultFragment_to_beverageFragment"
+            app:destination="@id/beverageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dessertsFragment"
+        android:name="com.example.demonavigation.Fragment.DessertsFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_desserts" >
+        <action
+            android:id="@+id/action_dessertsFragment_to_dishesFragment"
+            app:destination="@id/mainDishesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainDishesFragment"
+        android:name="com.example.demonavigation.Fragment.MainDishesFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_main_dishes" >
+        <action
+            android:id="@+id/action_mainDishesFragment_to_beverageFragment"
+            app:destination="@id/beverageFragment" />
+        <action
+            android:id="@+id/action_mainDishesFragment_to_dessertsFragment"
+            app:destination="@id/dessertsFragment" />
+    </fragment>
+</navigation>

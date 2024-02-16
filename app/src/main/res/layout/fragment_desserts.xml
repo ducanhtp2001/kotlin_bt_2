@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.DessertsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="Desserts"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_btn_bg"
+                android:contentDescription="@string/app_name" />
+
+            <ListView
+                android:id="@+id/listDesserts"
+                android:layout_width="310dp"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/btnToMainDishes"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow_right_icon"
+                android:background="@drawable/transparent_btn_bg"
+                android:contentDescription="@string/app_name" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
